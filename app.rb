@@ -28,7 +28,7 @@ post '/visit' do
 	f.write "Master: #{master}, User #{username}, Phone #{phone}, Date and time: #{datetime}\n"
 	f.close
 
-	erb :visit
+	erb "Ok! #{username} you waiting!"
 end
 
 post '/contacts' do
