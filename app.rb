@@ -19,16 +19,17 @@ get '/contacts' do
 end
 
 post '/visit' do
+	color = params[:color]
 	barber = params[:barber]
 	username = params[:username]
 	phone = params[:phone]
 	datetime = params[:datetime]
 
 	f = File.open "./public/user.txt", "a"
-	f.write "Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime}\n"
+	f.write "Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime}, Color #{color}\n"
 	f.close
 
-	erb "Ok! Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime} you waiting!"
+	erb "Ok! Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime}, Color #{color} you waiting!"
 end
 
 post '/contacts' do
