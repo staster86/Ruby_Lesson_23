@@ -28,7 +28,7 @@ post '/visit' do
 	f.write "Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime}\n"
 	f.close
 
-	erb "Ok! #{username} you waiting!"
+	erb "Ok! Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime} you waiting!"
 end
 
 post '/contacts' do
