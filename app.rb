@@ -19,13 +19,13 @@ get '/contacts' do
 end
 
 post '/visit' do
-	master = params[:master]
+	barber = params[:barber]
 	username = params[:username]
 	phone = params[:phone]
 	datetime = params[:datetime]
 
 	f = File.open "./public/user.txt", "a"
-	f.write "Master: #{master}, User #{username}, Phone #{phone}, Date and time: #{datetime}\n"
+	f.write "Barber: #{barber}, User #{username}, Phone #{phone}, Date and time: #{datetime}\n"
 	f.close
 
 	erb "Ok! #{username} you waiting!"
